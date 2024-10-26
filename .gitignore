@@ -1,2 +1,4 @@
 test/
 train/
+!sm-test/
+!sm-train/
