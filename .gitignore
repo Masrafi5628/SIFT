@@ -1,5 +1,7 @@
 test/
 train/
+small_data/
+aloi_ill/
 !sm-test/
 !sm-train/
 # for /L %i in (1,1,10) do xcopy "M:\SIFT\train\%i" "M:\SIFT\small_data\%i" /E /I
