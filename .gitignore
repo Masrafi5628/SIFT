@@ -5,4 +5,6 @@ aloi_ill/
 features/
 !sm-test/
 !sm-train/
+augmented_images/
+small_data_features/
 # for /L %i in (1,1,10) do xcopy "M:\SIFT\train\%i" "M:\SIFT\small_data\%i" /E /I
