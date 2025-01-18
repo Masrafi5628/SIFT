@@ -5,5 +5,10 @@ aloi_ill/
 features/
 !sm-test/
 !sm-train/
+<<<<<<< HEAD
 myenv/
+=======
+augmented_images/
+small_data_features/
+>>>>>>> 688f4c04baa8f83f0b4cb5afa443f7338e4c25e7
 # for /L %i in (1,1,10) do xcopy "M:\SIFT\train\%i" "M:\SIFT\small_data\%i" /E /I
