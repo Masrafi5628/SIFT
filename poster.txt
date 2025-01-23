@@ -1,0 +1,81 @@
+Poster Title
+
+
+1. Abstract
+Overview:
+Classification of images under varying lighting conditions is a persistent challenge.
+This research aims to propose a hybrid architecture combining Vision Transformer (ViT), EfficientNet, and LSTM to improve robustness.
+Objective:
+Develop an illumination-invariant image classification system that leverages spatial, global, and sequential features.
+Status:
+Work in progress; experiments on ALOI dataset underway.
+2. Introduction
+Problem Statement:
+Variability in lighting conditions negatively impacts feature extraction and classification accuracy.
+Objective:
+Propose a hybrid architecture that integrates feature extraction, attention mechanisms, and sequence modeling to handle illumination variance effectively.
+Hypothesis:
+The proposed Vision Transformer + EfficientNet + LSTM pipeline will outperform traditional and standalone methods in terms of classification accuracy and robustness.
+3. Dataset
+ALOI Dataset:
+Amsterdam Library of Object Images (ALOI), a dataset with object images captured under controlled lighting variations.
+Experiment Setup:
+Randomly selected 20 classes (out of 1000 total).
+Each class contains 2000 images, ensuring sufficient diversity.
+Augmentation:
+Techniques like rotation, flipping, and brightness variation used to simulate additional lighting conditions.
+4. Proposed Architecture
+Hybrid Model Design:
+
+EfficientNet: A pretrained convolutional neural network for spatial feature extraction.
+Vision Transformer (ViT): Captures global contextual relationships via attention mechanisms.
+Model: ViT-Base-Patch16-224 pretrained on ImageNet-21k.
+LSTM: Processes sequential embeddings from ViT to address illumination variability in spatial regions.
+Fully Connected Layers: Outputs class probabilities for final classification.
+Pipeline:
+
+Input images resized to 224x224.
+EfficientNet extracts spatial features.
+ViT applies global attention to feature embeddings.
+LSTM models sequential relationships.
+Fully connected layers classify into 20 classes.
+Expected Advantages:
+
+Combines the strengths of local features (EfficientNet), global attention (ViT), and temporal dependencies (LSTM).
+Robust to variations in lighting conditions.
+5. Research Design
+Methodology:
+Framework: TensorFlow/Keras with Transformers.
+Optimizer: Adam with learning rate scheduler.
+Loss Function: Categorical Crossentropy.
+Training Hardware: NVIDIA GeForce RTX 3080 Ti .
+
+Evaluation Plan:
+Metrics: Accuracy, Precision, Recall, F1-Score.
+Comparison Methods:
+SIFT + SVM.
+SIFT+GLAC + SVM.
+EfficientNet.
+Proposed ViT+EfficientNet+LSTM.
+
+6. Ongoing Work and Expected Outcomes
+Current Status:
+Dataset preprocessing completed.
+Model implementation and training in progress.
+Expected Outcomes:
+Improved classification accuracy over traditional methods.
+Robustness to illumination variance demonstrated through confusion matrices and performance metrics.
+Establish the efficacy of combining spatial, global, and sequential feature extraction.
+
+7. Visuals (Conceptual)
+Model Pipeline Diagram:
+Show the data flow from preprocessing to EfficientNet, ViT, LSTM, and final classification.
+Sample Inputs:
+Illustrate input images with varying lighting conditions from the ALOI dataset.
+Expected Results Placeholder:
+Placeholder bar graph comparing accuracy of traditional methods (e.g., SIFT) and the proposed architecture.
+
+8. Conclusion and Future Work
+Conclusion:
+Proposed a novel hybrid architecture for illumination-invariant image classification.
+Expect to demonstrate the superiority of the ViT+EfficientNet+LSTM approach compared to traditional and standalone methods.
